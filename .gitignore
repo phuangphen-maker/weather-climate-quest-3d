@@ -147,3 +147,8 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Browser test outputs and deployment archive
+test-results/
+playwright-report/
+/weather-climate-quest-3d-dist.zip

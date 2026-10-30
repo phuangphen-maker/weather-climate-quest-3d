@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#102d3d" />
+    <title>Weather & Climate Quest 3D</title>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="world" aria-label="โลกผจญภัยสามมิติ"></canvas>
+      <header>
+        <a class="brand" href="#">☀ WEATHER <span>& CLIMATE QUEST</span></a
+        ><button id="sound" aria-label="เปิดปิดเสียง">เสียง: เปิด</button>
+      </header>
+      <section id="hud" hidden>
+        <div class="panel">
+          <small id="standard"></small>
+          <h2 id="stageTitle"></h2>
+          <div id="progress"></div>
+        </div>
+        <div class="panel score">
+          <small>คะแนนสะสม</small><b id="score">0 / 30</b
+          ><span id="playerName"></span>
+        </div>
+      </section>
+      <div id="hint" hidden></div>
+      <aside id="guide" hidden>
+        <b>คู่มือนักสำรวจ</b>
+        <p>
+          W/S เดิน · A/D เลี้ยว · Shift วิ่ง<br />Space กระโดด · E สำรวจ<br />เดินเข้าใกล้
+          ? เพื่อเริ่มคำถาม
+        </p>
+        <button id="labOpen">⚗ เปิดห้องทดลอง</button
+        ><button id="summaryOpen">ดูความคืบหน้า</button>
+      </aside>
+      <nav id="mobile" hidden aria-label="ปุ่มควบคุมมือถือ">
+        <div class="pad">
+          <button data-key="ArrowUp" aria-label="เดินหน้า">▲</button
+          ><button data-key="ArrowLeft" aria-label="ซ้าย">◀</button
+          ><button data-key="ArrowDown" aria-label="ถอยหลัง">▼</button
+          ><button data-key="ArrowRight" aria-label="ขวา">▶</button>
+        </div>
+        <div class="actions">
+          <button data-key="ShiftLeft">วิ่ง</button
+          ><button data-key="Space">กระโดด</button
+          ><button id="interact">สำรวจ E</button>
+        </div>
+      </nav>
+      <div id="overlay"></div>
+      <div id="toast" role="status"></div>
+      <footer>SCIENCE EXPLORER · มัธยมศึกษาปีที่ 1</footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
